@@ -3,7 +3,7 @@ searchBtn.addEventListener('click',checkWeather);
 function getTime(utcOffset)
 {
     utcOffset*=1000;
-    return new Date(utcOffset).toLocaleTimeString();
+    return new Date(utcOffset).toTimeString();
 }
 async function checkWeather()
 {
