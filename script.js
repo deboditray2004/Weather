@@ -21,7 +21,7 @@ async function checkWeather()
         document.querySelector(".windSpeed").innerHTML=`${Math.round(data.wind.speed*10)/10} km/h`;
 
         const weatherIcon=data.weather[0].icon;
-        document.querySelector(".weather-icon").src=`https://openweathermap.org/img/wn/${weatherIcon}@3x.png`;
+        document.querySelector(".weather-icon").src=`https://openweathermap.org/img/wn/${weatherIcon}@4x.png`;
 
         document.querySelector(".errorDiv").style.display="none";
         document.querySelector(".weather").style.display="block";
