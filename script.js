@@ -1,4 +1,3 @@
-const apiKey="7c4830e229ef7267c261335064944576";
 const searchBtn=document.querySelector('button');
 searchBtn.addEventListener('click',checkWeather);
 
@@ -6,7 +5,7 @@ async function checkWeather()
 {
     try{
         const location=document.querySelector("input").value.toLowerCase();
-        const apiUrl=`https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=${apiKey}&units=metric`;
+        const apiUrl=`/.netlify/functions/getWeather?city=${location}`;
         const response=await fetch(apiUrl);
         if(!response.ok)
         {
