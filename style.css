@@ -37,15 +37,13 @@ body {
 .search {
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 10px;
-  width: 100%;
-  margin-bottom: 15px;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: nowrap;
 }
 
 .search input {
   flex: 1;
-  min-width: 0;
   height: 55px;
   background: #ebfffc;
   border: none;
@@ -85,37 +83,6 @@ body {
 
 .search button img {
   width: 20px;
-}
-
-/* ✅ Mobile-friendly adjustments */
-@media (max-width: 480px) {
-  .search {
-    gap: 8px;
-  }
-
-  .search input {
-    height: 48px;
-    font-size: 16px;
-    border-radius: 25px;
-    padding: 0 10px;
-  }
-
-  .search button {
-    width: 48px;
-    height: 48px;
-  }
-}
-
-@media (max-width: 360px) {
-  .search input {
-    height: 45px;
-    font-size: 15px;
-  }
-
-  .search button {
-    width: 45px;
-    height: 45px;
-  }
 }
 
 /* Weather info */
@@ -197,9 +164,6 @@ body {
   display: none;
 }
 
-/* ===============================
-   📱 Mobile Responsive Adjustments
-   =============================== */
 
 /* For small phones (<= 480px width) */
 @media (max-width: 480px) {
