@@ -6,10 +6,6 @@ A clean and responsive web application that provides real-time weather informati
 
 **[https://naturemood.netlify.app/](https://naturemood.netlify.app/)**
 
-## Screenshot
-
-![A screenshot of the weather app showing the weather for a city.](https://i.imgur.com/L8aF3jD.png)
-
 ## Features
 
 -   **Real-time Weather Data**: Get up-to-the-minute weather information for any city.
