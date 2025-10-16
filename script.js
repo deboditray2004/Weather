@@ -20,8 +20,8 @@ async function checkWeather()
         document.querySelector(".humidity").innerHTML=`${data.main.humidity}%`;
         document.querySelector(".windSpeed").innerHTML=`${Math.round(data.wind.speed*10)/10} km/h`;
 
-        const weatherCond=data.weather[0].main.toLowerCase();
-        document.querySelector(".weather-icon").src=`images/${weatherCond}.png`;
+        const weatherIcon=data.weather[0].icon;
+        document.querySelector(".weather-icon").src=`https://openweathermap.org/img/wn/${weatherIcon}@2x.png`;
 
         document.querySelector(".errorDiv").style.display="none";
         document.querySelector(".weather").style.display="block";
