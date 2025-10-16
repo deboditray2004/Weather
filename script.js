@@ -2,7 +2,7 @@ const searchBtn=document.querySelector('button');
 searchBtn.addEventListener('click',checkWeather);
 function getTime(utcOffset)
 {
-    return new Date(new Date().getTime()+utcOffset).toLocaleTimeString();
+    return new Date(new Date().getTime()+new Date().getTimezoneOffset() * 60000+utcOffset).toLocaleTimeString();
 }
 async function checkWeather()
 {
