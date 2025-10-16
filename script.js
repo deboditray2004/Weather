@@ -2,8 +2,7 @@ const searchBtn=document.querySelector('button');
 searchBtn.addEventListener('click',checkWeather);
 function getTime(utcOffset)
 {
-    utcOffset*=1000;
-    return new Date(utcOffset).toLocaleTimeString();
+    return new Date(new Date().getTime()+utcOffset).toLocaleTimeString();
 }
 async function checkWeather()
 {
@@ -20,7 +19,7 @@ async function checkWeather()
         console.log(data);
 
         document.querySelector(".temp").innerHTML=`${Math.round(data.main.temp*10)/10}°c`;
-        const time=getTime(parseInt(data.timezone)+parseInt(data.dt));
+        const time=getTime(parseInt(data.timezone)*1000);
         console.log(time);
         document.querySelector(".city").innerHTML=data.name+", "+time;
         document.querySelector(".humidity").innerHTML=`${data.main.humidity}%`;
